@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""check the object is instance or if the object
+""" check the object is instance or if the object
     is an instance if a class
 """
 

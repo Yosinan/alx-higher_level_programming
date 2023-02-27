@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""check if the object is an instance"""
+""" check if the object is an instance"""
 
 
 def inherits_from(obj, a_class):

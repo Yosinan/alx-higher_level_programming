@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-<<<<<<< HEAD
-"""Define a base geometry class"""
+
+""" Define a base geometry class"""
 
 
 class BaseGeometry:
@@ -8,7 +8,7 @@ class BaseGeometry:
 
     def area(self):
         """
-=======
+
 """Defines a base geometry class BaseGeometry"""
 
 
@@ -26,4 +26,4 @@ class BaseGeometry:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
->>>>>>> 00503bcd96c58596500116ddd97fbf725fc4c8c8
+

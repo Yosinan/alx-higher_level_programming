@@ -16,7 +16,6 @@ class Rectangle {
   }
 }
 
-
 const r1 = new Rectangle(2, 3);
 r1.print();
 

@@ -1,2 +1,2 @@
 #!/usr/bin/node
-//a script that concats 2 files
+// a script that concats 2 files

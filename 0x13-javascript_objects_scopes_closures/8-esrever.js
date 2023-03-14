@@ -7,4 +7,5 @@ exports.esrever = function (list) {
   for (j; j >= 0; j--) {
     newList.append(j[list]);
   }
+  return newList;
 };

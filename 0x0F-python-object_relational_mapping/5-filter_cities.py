@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# a script that lists all states from the database hbtn_0e_0_usa
+# a script that lists all cities from the database hbtn_0e_0_usa
 
 import MySQLdb
 from sys import argv
@@ -16,7 +16,7 @@ if __name__ == '__main__':
         db=argv[3],
         charset="utf8")
     cur = con.cursor()
-    cur.execute("SELECT * FROM states ORDER By id ASC")
+    cur.execute("SELECT * FROM cities ORDER By cities.id ASC")
     row_query = cur.fetchall()
 
     # printing the data

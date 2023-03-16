@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-# a script that lists all states from the database hbtn_0e_0_usa
+# a script that takes in an argument and displays all values in the states table of hbtn_0e_0_usa where name matches the argument.
+
 
 import MySQLdb
 from sys import argv
@@ -14,9 +15,10 @@ if __name__ == '__main__':
         user=argv[1],
         passwd=argv[2],
         db=argv[3],
+        search=argv[4],
         charset="utf8")
     cur = con.cursor()
-    cur.execute("SELECT * FROM states ORDER By id ASC")
+    cur.execute("SELECT * FROM states ORDER By states.id ASC")
     row_query = cur.fetchall()
 
     # printing the data

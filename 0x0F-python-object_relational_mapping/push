@@ -1,0 +1,9 @@
+#!/bin/bash
+
+chmod u+x *
+chmod 466 README.md
+
+git add .
+git commit -m "0x0F. Python - Object-relational mapping"
+git push
+

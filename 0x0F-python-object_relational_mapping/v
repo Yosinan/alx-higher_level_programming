@@ -1,0 +1,7 @@
+#!/bin/bash
+#vi 10-model_state_my_get.py
+vi 100-relationship_states_cities.py
+vi 101-relationship_states_cities_list.py
+vi 102-relationship_cities_states_list.py
+vi relationship_city.py
+vi relationship_state.py

@@ -9,14 +9,14 @@ from sys import argv
 
 if __name__ == '__main__':
     # making a connection to the database
-    con = MySQLdb.connect(
+    db = MySQLdb.connect(
         host="localhost",
         port=3306,
         user=argv[1],
         passwd=argv[2],
         db=argv[3],
     )
-    cur = con.cursor()
+    cur = db.cursor()
     cur.execute(
         "SELECT * FROM states WHERE nameLIKE BINARY 'N%' ORDER By id ASC")
     row_query = cur.fetchall()
@@ -26,4 +26,4 @@ if __name__ == '__main__':
         print(row)
     # cleaning up the process
     cur.close()
-    con.close()
+    db.close()

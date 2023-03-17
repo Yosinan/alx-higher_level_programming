@@ -16,7 +16,7 @@ if __name__ == '__main__':
         db=argv[3],
         charset="utf8")
     cur = con.cursor()
-    cur.execute("SELECT * FROM states ORDER By id ASC")
+    cur.execute("SELECT * FROM states")
     row_query = cur.fetchall()
 
     # printing the data

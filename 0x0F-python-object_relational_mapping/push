@@ -1,6 +1,6 @@
 #!/bin/bash
 
-chmod u+x *
+chmod u+x *.py
 chmod 466 README.md
 
 git add .

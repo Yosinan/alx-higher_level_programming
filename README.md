@@ -1,1 +1,4 @@
-## Alx-Higher_level_programming, MySQL
+# Alx-Higher_level_programming
+- Python
+- MySQL
+- JavaScript

@@ -15,13 +15,14 @@ if __name__ == '__main__':
         user=argv[1],
         passwd=argv[2],
         db=argv[3],
-        charset="utf8")
+        )
     cur = con.cursor()
-    cur.execute("SELECT * FROM states ORDER By states.id ASC")
+    cur.execute("SELECT * FROM states WHERE nameLIKE BINARY 'N%' ORDER By id ASC")
     row_query = cur.fetchall()
 
     # printing the data
     for row in row_query:
         print(row)
+    # cleaning up the process
     cur.close()
     con.close()

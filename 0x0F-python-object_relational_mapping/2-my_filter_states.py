@@ -16,9 +16,9 @@ if __name__ == '__main__':
     # through the same connection to the database.
     cur = con.cursor()
 
-    cur.execute("SELECT * FROM states WHERE name\
+    exe = "SELECT * FROM states WHERE name\
             LIKE BINARY '{}' ORDER BY id ASC".format(argv[4])
-
+    cur.execute(exe)
     rows = cur.fetchall()
     for i in rows:
         print(i)

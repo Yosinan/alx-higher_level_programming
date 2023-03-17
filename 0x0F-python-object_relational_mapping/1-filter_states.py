@@ -14,8 +14,10 @@ if __name__ == '__main__':
         port=3306,
         user=argv[1],
         passwd=argv[2],
-        db=argv[3],
+        db=argv[3]
     )
+    # It gives us the ability to have multiple seperate working environments
+    # through the same connection to the database.
     cur = db.cursor()
     cur.execute(
         "SELECT * FROM states WHERE nameLIKE BINARY 'N%' ORDER By id ASC")

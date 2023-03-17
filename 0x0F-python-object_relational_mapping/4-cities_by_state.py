@@ -16,7 +16,9 @@ if __name__ == '__main__':
         db=argv[3],
         charset="utf8")
     cur = con.cursor()
-    cur.execute("SELECT * FROM cities ORDER By cities.id ASC")
+    cur.execute("SELECT cities.id, cities.name, states.name FROM cities\
+            INNER JOIN states ON cities.state_id = states.id\
+            ORDER By cities.id ASC")
     row_query = cur.fetchall()
 
     # printing the data

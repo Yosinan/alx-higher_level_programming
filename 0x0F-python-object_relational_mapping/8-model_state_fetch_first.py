@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
     st = session.query(State).order_by(State.id).first()
     if st:
-        print("{}: {}".format(state.id, state.name))
+        print("{}: {}".format(st.id, st.name))
     else:
         print("Nothing")
     session.close()

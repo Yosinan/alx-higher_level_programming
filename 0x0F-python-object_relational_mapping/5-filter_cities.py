@@ -28,6 +28,6 @@ if __name__ == '__main__':
     k = []
     for row in row_query:
         k.append(row[0])
-    print(str(k))
+    print(", ".join(k))
     cur.close()
     con.close()

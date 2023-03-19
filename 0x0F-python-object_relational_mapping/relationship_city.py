@@ -3,7 +3,7 @@
 module that creates a class 'city' based on Base
 """
 from sqlalchemy import Column, Integer, String, ForeignKey
-from relationship_state import Base
+from model_state import Base
 
 
 class City(Base):

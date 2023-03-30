@@ -1,0 +1,6 @@
+chmod u+x *.sh
+
+git add .
+git commit -m "Python - Network #0"
+git push
+

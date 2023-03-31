@@ -3,7 +3,7 @@
 # oldest) of the repository “rails” by the user “rails”
 
 import requests
-import sys 
+import sys
 
 if __name__ == '__main__':
 

@@ -13,7 +13,8 @@ if __name__ == '__main__':
         owner_name, repo_name)
     res = requests.get(url)
     js = res.json()
-    for i in js[0:10]:
+    for i in sorted(js, key=lambda c: c.get('commit')
+                         .get('author').get('date'), reverse=True)[0:10]:
         print(
             "{}: {}".format(
                 i.get('sha'),

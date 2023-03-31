@@ -14,7 +14,7 @@ if __name__ == '__main__':
     res = requests.get(url)
     js = res.json()
     for i in sorted(js, key=lambda c: c.get('commit')
-                         .get('author').get('date'), reverse=True)[0:10]:
+                    .get('author').get('date'), reverse=True)[0:10]:
         print(
             "{}: {}".format(
                 i.get('sha'),

@@ -10,16 +10,16 @@ if __name__ == '__main__':
     my_username = sys.argv[1]
     my_PAToken = sys.argv[2]
 
-    req = requests(
+    req = requests.get(
         'https://api.github.com/user',
         auth=(
             my_username,
             my_PAToken))
 
     json_file = req.json()
-    my_ID = json_file['id']
+    #my_ID = json_file['id']
 
     try:
-        print(my_ID)
-    except BaseException:
+        print(json_file['id'])
+    except:
         print("None")

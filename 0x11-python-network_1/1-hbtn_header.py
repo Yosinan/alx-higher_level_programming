@@ -6,6 +6,7 @@ import urllib.request
 import sys
 
 if __name__ == "__main__":
+
     with urllib.request.urlopen(sys.argv[1]) as respon:
         val = respon.info()
     print(val['X-Request-Id'])

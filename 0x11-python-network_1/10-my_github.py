@@ -17,9 +17,9 @@ if __name__ == '__main__':
             my_PAToken))
 
     json_file = req.json()
-    #my_ID = json_file['id']
+    # my_ID = json_file['id']
 
     try:
         print(json_file['id'])
-    except:
+    except BaseException:
         print("None")

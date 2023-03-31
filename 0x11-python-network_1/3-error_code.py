@@ -1,19 +1,18 @@
 #!/usr/bin/python3
-"""
- a python script that takes in a URL, sends a request to the URL
+'''
+ Python script that takes in a URL, sends a request to the URL
  and manage HTTP Errors
-"""
-import urllib.request
+'''
+
 import sys
+import urllib.request
 
-if __name__ == "__main__":
-
-    re = urllib.request.Request(sys.argv[1])
-
+if __name__ == '__main__':
+    
+    req = urllib.request.Request(sys.argv[1])
+    
     try:
-        with urllib.request.urlopen(re) as res:
-            reqs = res.read().decode('utf8')
-        print(reqs)
-
-    except urllib.error.HTTPError as err:
-        print("Error code: {}".format(err.code))
+        with urllib.request.urlopen(req) as response:
+            print(response.read().decode('utf-8'))
+    except urllib.exceptions.HTTPError as e:
+        print("Error code: {}".format(e.message))

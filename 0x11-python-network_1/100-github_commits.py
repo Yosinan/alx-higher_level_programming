@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-# a pyhthon script that will list 10 commits (from the most recent to
-# oldest) of the repository “rails” by the user “rails”
-
+'''
+a pyhthon script that will list 10 commits (from the most recent to
+oldest) of the repository “rails” by the user “rails”
+'''
 import requests
 import sys
 

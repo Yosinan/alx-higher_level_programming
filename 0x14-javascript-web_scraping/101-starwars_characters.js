@@ -13,13 +13,13 @@ request(filmList, function (err, res) {
 });
 
 function rec (data, idx) {
-	    request(data[idx], (err, res) => {
-		    if (err) console.log(err);
-		    else {
-			    console.log(JSON.parse(res.body).name);
-			    if (idx + 1 < data.length) {
-				    rec(data, idx + 1);
-			    }
-		    }
-	    });
+  request(data[idx], (err, res) => {
+    if (err) console.log(err);
+    else {
+      console.log(JSON.parse(res.body).name);
+      if (idx + 1 < data.length) {
+        rec(data, idx + 1);
+      }
+    }
+  });
 }

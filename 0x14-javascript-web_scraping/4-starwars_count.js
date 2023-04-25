@@ -1,4 +1,4 @@
-#!/bin/node
+#!/usr/bin/node
 const request = require('request');
 const url = 'https://swapi-api.alx-tools.com/api/people/18/';
 const link = process.argv[2];

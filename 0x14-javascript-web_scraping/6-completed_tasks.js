@@ -9,10 +9,8 @@ request(link, (err, res, body) => {
 
   for (let k = 1; k <= 10; k++) {
     const totCompleted = JSON.parse(body).filter(todo => todo.completed === true).filter(todo => todo.userId === k).length;
-    while (totCompleted) {
-      totalCompletedTask[k] = totCompleted;
-      break;
-    }
+
+    totalCompletedTask[k] = totCompleted;
   }
   console.log(totalCompletedTask);
 });

@@ -8,16 +8,18 @@ request(filmList, function (err, res) {
   if (err) console.log(err);
   else {
     const data = JSON.parse(res.body).characters;
-    const charArr = [];
-    data.forEach(function (d) {
-      request(d, function (err, res) {
-        if (err) console.log(err);
-        else {
-          const chars = JSON.parse(res.body);
-          charArr.push(chars.name);
-        }
-      });
-    });
-    charArr.forEach(console.log);
+    rec(data, 0);
   }
 });
+
+function rec (data, idx) {
+	    request(data[idx], (err, res) => {
+		    if (err) console.log(err);
+		    else {
+			    console.log(JSON.parse(res.body).name);
+			    if (idx + 1 < data.length) {
+				    rec(data, idx + 1);
+			    }
+		    }
+	    });
+}
